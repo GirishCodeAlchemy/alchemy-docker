@@ -7,3 +7,17 @@
 ```bash
 docker build -t <ImageName>:<Tagname> -f src/multi-stage-Dockerfile .
 ```
+
+## Facts:
+
+### 1. Alpine:
+
+- One of the smallest Docker base images, typically around 5 MB in size.
+- Uses apk (Alpine Package Keeper) for package management
+- Ideal for creating minimal, resource-efficient Docker images for applications where size and security are critical, such as microservices and lightweight applications.
+
+### 2. Slim:
+
+- Generally larger than Alpine but smaller than full versions of the same operating systems. The size can vary, but it is significantly more substantial than Alpine.
+- Uses apt (Advanced Package Tool) for package management, consistent with Debian-based systems.
+- Suitable for scenarios where a smaller image is desired but compatibility with Debian-based packages and software is required, providing a good balance between size and functionality.
