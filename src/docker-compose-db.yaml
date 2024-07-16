@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgresql
+    environment:
+      - POSTGRES_USER=alchemy
+      - POSTGRES_PASSWORD=alchemy
+      - POSTGRES_DB=alchemy
+    volumes:
+      - postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+      - postgres/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      # - postgresql:/var/lib/postgresql
+      # - postgresql/data:/var/lib/postgresql/data
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    ports:
+      - "5432:5432"
+
+  
