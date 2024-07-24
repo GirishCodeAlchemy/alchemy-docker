@@ -14,9 +14,6 @@ resource "docker_container" "web" {
 }
 
 
-
-
-
 /* Sample docker resource
 
 resource "docker_container" "web" {}
