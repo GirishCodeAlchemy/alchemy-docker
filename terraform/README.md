@@ -1,3 +1,10 @@
+<a href="https://docker.com">
+    <img src="https://raw.githubusercontent.com/kreuzwerker/terraform-provider-docker/master/assets/docker-logo.png" alt="Docker logo" title="Docker" align="right" height="100" />
+</a>
+<a href="https://terraform.io">
+    <img src="https://raw.githubusercontent.com/kreuzwerker/terraform-provider-docker/master/assets/terraform-logo.png" alt="Terraform logo" title="Terraform" align="right" height="100" />
+</a>
+
 # Terraform Docker Setup
 
 This repository contains Terraform configurations to set up a Docker environment with a PostgreSQL database and an Nginx web server.

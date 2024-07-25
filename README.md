@@ -21,3 +21,7 @@ docker build -t <ImageName>:<Tagname> -f src/multi-stage-Dockerfile .
 - Generally larger than Alpine but smaller than full versions of the same operating systems. The size can vary, but it is significantly more substantial than Alpine.
 - Uses apt (Advanced Package Tool) for package management, consistent with Debian-based systems.
 - Suitable for scenarios where a smaller image is desired but compatibility with Debian-based packages and software is required, providing a good balance between size and functionality.
+
+# Manage the Docker deployment using Terraform
+
+- [Document](./terraform/README.md)
