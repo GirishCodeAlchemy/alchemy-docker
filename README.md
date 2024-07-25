@@ -25,6 +25,8 @@ docker build -t <ImageName>:<Tagname> -f src/multi-stage-Dockerfile .
 # Manage the Docker deployment using Terraform
 
 - [Document](./terraform/README.md)
+- [![Docker](https://github.com/user-attachments/assets/419f3872-1905-4084-a498-4e0756277e3f)](./terraform/README.md)
+
 
 ## License
 
