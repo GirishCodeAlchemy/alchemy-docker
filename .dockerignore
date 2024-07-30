@@ -21,3 +21,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+
+.gitignore
+.editorconfig
+.github/
+docs/
