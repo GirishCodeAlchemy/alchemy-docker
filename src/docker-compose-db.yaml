@@ -7,9 +7,9 @@ services:
     image: postgres
     container_name: postgresql
     environment:
-      - POSTGRES_USER=alchemy
-      - POSTGRES_PASSWORD=alchemy
-      - POSTGRES_DB=alchemy
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     volumes:
       - postgres/postgresql.conf:/etc/postgresql/postgresql.conf
       - postgres/pg_hba.conf:/etc/postgresql/pg_hba.conf
