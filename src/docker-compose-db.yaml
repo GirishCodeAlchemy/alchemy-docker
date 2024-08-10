@@ -1,5 +1,7 @@
 version: '3.8'
-
+networks:
+  db-network:
+    driver: bridge
 services:
   postgres:
     image: postgres
@@ -18,5 +20,27 @@ services:
     ports:
       - "5432:5432"
 
+  adminer:
+    container_name: adminer
+    image: adminer
+    networks:
+      - db-network
+    restart: always
+    ports:
+      - 8090:
+
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    entrypoint: redis-server --appendonly yes
+    networks:
+      - db-network
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - redisdata:/data
+
 volumes:
   pgdata:
+  redisdata:
