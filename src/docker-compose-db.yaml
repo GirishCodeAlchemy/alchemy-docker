@@ -6,10 +6,14 @@ services:
   postgres:
     image: postgres
     container_name: postgresql
-    environment:
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
+    networks:
+      - db-network
+    env_files:
+      - .env
+    # environment:
+    #   - POSTGRES_USER=${DB_USER}
+    #   - POSTGRES_PASSWORD=${DB_PASSWORD}
+    #   - POSTGRES_DB=${DB_NAME}
     volumes:
       - postgres/postgresql.conf:/etc/postgresql/postgresql.conf
       - postgres/pg_hba.conf:/etc/postgresql/pg_hba.conf
@@ -27,7 +31,7 @@ services:
       - db-network
     restart: always
     ports:
-      - 8090:
+      - 8080:8080
 
   redis:
     container_name: redis
